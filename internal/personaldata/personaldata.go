@@ -1,9 +1,18 @@
 package personaldata
 
+import "fmt"
+
+const personalPrintFormat = `Имя: %s
+Вес: %.2f
+Рост: %.2f
+`
+
 type Personal struct {
-	// TODO: добавить поля
+	Name   string
+	Weight float64
+	Height float64
 }
 
 func (p Personal) Print() {
-	// TODO: реализовать функцию
+	fmt.Printf(personalPrintFormat, p.Name, p.Weight, p.Height)
 }
